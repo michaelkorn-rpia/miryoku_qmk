@@ -51,6 +51,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
       - name: Merge branches
         if: ${{ matrix.merge != '' && matrix.merge != 'default' }}
         run: |
